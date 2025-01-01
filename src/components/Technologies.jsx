@@ -52,6 +52,16 @@ const Technologies = () => {
         type: "spring",
         bounce: 0.4
       }
+    },
+    wave: {
+      y: [0, -10, 0],
+      x: [-5, 5, -5],
+      transition: {
+        duration: 2,
+        repeat: Infinity,
+        ease: "easeInOut",
+        times: [0, 0.5, 1]
+      }
     }
   };
 
@@ -76,6 +86,7 @@ const Technologies = () => {
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
+        animate="wave"
         viewport={{ once: true }}
         className="flex flex-wrap items-center justify-center gap-8 perspective-1000"
       >
@@ -84,10 +95,13 @@ const Technologies = () => {
             key={index}
             variants={itemVariants}
             whileHover="hover"
-            className="group relative rounded-2xl border-2 border-neutral-800 p-6 backdrop-blur-sm bg-opacity-10 bg-white/5 transition-colors hover:border-neutral-700"
+            animate="wave"
+            custom={index}
             style={{
               transformStyle: "preserve-3d",
+              transition: `delay ${index * 0.1}s`
             }}
+            className="group relative rounded-2xl border-2 border-neutral-800 p-6 backdrop-blur-sm bg-opacity-10 bg-white/5 transition-colors hover:border-neutral-700"
           >
             <Icon 
               className="text-7xl transition-transform group-hover:scale-110" 

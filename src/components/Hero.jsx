@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { HERO_CONTENT } from "../constants";
-import profile from "../assets/kevinRushProfile.png";
+import profile from "../assets/shreyanProfile.jpg";
 
 const Hero = () => {
   return (
@@ -32,7 +32,7 @@ const Hero = () => {
               transition={{ delay: 0.6, duration: 0.6 }}
               className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent"
             >
-              Full Stack Developer
+              Welcome to My Portfolio
             </motion.span>
             <motion.p
               initial={{ y: 20, opacity: 0 }}
@@ -48,12 +48,12 @@ const Hero = () => {
           initial={{ x: 100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.8 }}
-          className="w-full lg:w-1/2 lg:p-8"
+          className="w-full lg:w-1/2 lg:p-8 lg:mt-20"
         >
           <div className="flex justify-center">
             <motion.img 
               src={profile} 
-              alt="Kevin Rush"
+              alt="Shreyan Panda"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.6 }}

@@ -3,12 +3,17 @@ import project2 from "../assets/projects/project-2.jpg";
 import project3 from "../assets/projects/project-3.jpg";
 import project4 from "../assets/projects/project-4.jpg";
 
-export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. With 5 years of hands-on experience, I have honed my skills in front-end technologies like React and Next.js, as well as back-end technologies like Node.js, MySQL, PostgreSQL, and MongoDB. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
+export const HERO_CONTENT = `I am Shreyan my journey in computer science began with a deep curiosity for problem-solving, which has evolved into a mission to leverage my skills in innovative projects that push the boundaries of what's possible.
+I thrive in challenging environments and enjoy tackling complex problems to deliver effective solutions. In addition to my academic pursuits, I actively seek opportunities to explore new technologies and contribute to collaborative projects. I invite you to explore my work and join me on this exciting journey through the world of technology!`;
 
-export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 5 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, MySQL, PostgreSQL, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
+export const ABOUT_TEXT = `I am a dedicated and versatile computer science student with a passion for competitive programming and a strong focus on data structures and algorithms. Currently in my third year, I have developed proficiency in several programming languages, including C, C++, Java, HTML, CSS, and Python. As an AI and machine learning enthusiast, I am committed to staying at the forefront of these transformative technologies. My journey in computer science started with a deep curiosity for problem-solving, which has evolved into a mission to leverage my skills in projects that push the boundaries of what's possible. I thrive in challenging environments and enjoy tackling complex problems to deliver innovative solutions. Outside of my academic pursuits, I am eager to explore new technologies and contribute to collaborative projects.`;
 
 export const EXPERIENCES = [
-  
+  {
+    year: "2023 - Present",
+    description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with stakeholders to define project requirements and timelines.`,
+    technologies: ["Javascript", "React.js", "Next.js", "mongoDB"],
+  },
   {
     year: "2021 - 2022",
     role: "Frontend Developer",
@@ -40,11 +45,10 @@ export const PROJECTS = [
     technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
   },
   {
-    title: "Nagrik Aur Sanvidhan App",
+    title: "Nagrik aur Sambhidhan App",
     image: project2,
-    description:
-      "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
-    technologies: ["HTML", "CSS", "Angular", "Firebase"],
+    description: "Contributed to developing an application that transforms interactions with the Constitution, making it engaging and accessible. Helped build features that gamify constitutional learning and improve user engagement.",
+    technologies: ["React Native CLI", "Bootstrap", "Flask", "MySQL", "Java", "Apache OpenNLP"],
   },
   {
     title: "Portfolio Website",
