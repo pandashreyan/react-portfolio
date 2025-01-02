@@ -14,7 +14,15 @@ const socialLinks = {
 
 const Navbar = () => {
   const iconVariants = {
-    hover: { scale: 1.2, rotate: 5, transition: { duration: 0.2 } }
+    hover: { 
+      scale: 1.2, 
+      rotateY: 180,  // 3D flip effect
+      transition: { 
+        duration: 0.4,
+        type: "spring",
+        stiffness: 200
+      } 
+    }
   };
 
   // Create array of icon components with their corresponding links
@@ -27,15 +35,25 @@ const Navbar = () => {
 
   return (
     <motion.nav 
-      initial={{ y: -100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.7, type: "spring", bounce: 0.3 }}
+      initial={{ y: -100, opacity: 0, rotateX: -45 }}  // Added 3D rotation
+      animate={{ y: 0, opacity: 1, rotateX: 0 }}
+      transition={{ 
+        duration: 0.8, 
+        type: "spring", 
+        bounce: 0.4,
+        stiffness: 100
+      }}
       className="mb-20 flex items-center justify-between py-6"
     >
       <motion.div 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5, duration: 0.5 }}
+        initial={{ opacity: 0, scale: 0.5, rotateY: -90 }}
+        animate={{ opacity: 1, scale: 1, rotateY: 0 }}
+        transition={{ 
+          delay: 0.3,
+          duration: 0.8,
+          type: "spring",
+          stiffness: 150
+        }}
         className="flex flex-shrink-0 items-center"
       >
         <img 
