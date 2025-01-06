@@ -83,7 +83,8 @@ const Hero = () => {
                 duration: 1.2, 
                 delay: 0.4, 
                 type: "spring",
-                stiffness: 100
+                stiffness: 100,
+                name: "paragraphFadeIn"
               }}
               className="mt-6 max-w-xl text-lg text-neutral-400 transform-gpu"
             >
@@ -110,7 +111,8 @@ const Hero = () => {
                 duration: 1.2, 
                 type: "spring",
                 stiffness: 100,
-                damping: 15
+                damping: 15,
+                name: "imageReveal"
               }}
               src={profile} 
               alt="Shreyan Panda"
@@ -123,7 +125,8 @@ const Hero = () => {
                 transition: { 
                   duration: 0.4,
                   type: "spring",
-                  stiffness: 300
+                  stiffness: 300,
+                  name: "imageHover"
                 }
               }}
             />

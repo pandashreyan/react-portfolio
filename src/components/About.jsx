@@ -64,57 +64,22 @@ const About = () => {
 
       <div className="flex flex-wrap items-center gap-8">
         <motion.div 
-          ref={imageRef}
-          initial={{ opacity: 0, x: -100 }}
-          animate={isImageInView ? 
-            { opacity: 1, x: 0 } : 
-            { opacity: 0, x: -100 }
-          }
-          style={{ 
-            rotateY,
-            transformStyle: "preserve-3d"
-          }}
-          transition={{ 
-            duration: 1,
-            type: "spring",
-            bounce: 0.4
-          }}
-          className="w-full lg:w-[45%] perspective-1000"
-        >
-          <motion.img 
-            whileHover={{ 
-              scale: 1.05, 
-              rotateY: 5,
-              z: 50
-            }}
-            transition={{ 
-              duration: 0.4,
-              type: "spring",
-              stiffness: 300
-            }}
-            src={aboutImg} 
-            alt="About Me" 
-            className="w-full rounded-2xl object-cover shadow-lg transform-gpu"
-          />
-        </motion.div>
-
-        <motion.div 
           ref={textRef}
           initial={{ opacity: 0, x: 100 }}
           animate={isTextInView ? 
             { opacity: 1, x: 0 } : 
             { opacity: 0, x: 100 }
           }
+          transition={{ 
+            duration: 1.2,
+            type: "spring",
+            bounce: 0.4
+          }}
           style={{ 
             rotateX,
             transformStyle: "preserve-3d"
           }}
-          transition={{ 
-            duration: 1,
-            type: "spring",
-            bounce: 0.4
-          }}
-          className="w-full lg:w-[45%] perspective-1000"
+          className="w-full lg:w-[100%] perspective-1000"
         >
           <motion.p 
             className="text-lg text-neutral-400 transform-gpu"

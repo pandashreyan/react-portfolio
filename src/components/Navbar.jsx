@@ -1,14 +1,12 @@
 import { motion } from "framer-motion";
 import logo from "../assets/KEVINLOGO.jpg";
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
-import { FaSquareXTwitter } from "react-icons/fa6";
-import { FaInstagram } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaTwitter, FaCode } from "react-icons/fa";
+
 const socialLinks = {
   linkedin: "https://www.linkedin.com/in/shreyan-panda-a4a6aa254/",
   github: "https://github.com/pandashreyan",
-  instagram: "#", 
-  twitter: "#"
+  leetcode: "https://leetcode.com/u/shreyan1302/",
+  twitter: "https://twitter.com/"
 };
 
 
@@ -29,8 +27,8 @@ const Navbar = () => {
   const socialIcons = [
     { Icon: FaLinkedin, link: socialLinks.linkedin },
     { Icon: FaGithub, link: socialLinks.github },
-    { Icon: FaInstagram, link: socialLinks.instagram },
-    { Icon: FaSquareXTwitter, link: socialLinks.twitter }
+    { Icon: FaCode, link: socialLinks.leetcode },
+    { Icon: FaTwitter, link: socialLinks.twitter }
   ];
 
   return (
@@ -48,6 +46,14 @@ const Navbar = () => {
       <motion.div 
         initial={{ opacity: 0, scale: 0.5, rotateY: -90 }}
         animate={{ opacity: 1, scale: 1, rotateY: 0 }}
+        whileHover={{ 
+          rotateY: 360,
+          transition: {
+            duration: 0.8,
+            type: "spring",
+            stiffness: 150
+          }
+        }}
         transition={{ 
           delay: 0.3,
           duration: 0.8,

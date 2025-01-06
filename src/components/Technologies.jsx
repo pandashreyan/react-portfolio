@@ -1,6 +1,6 @@
 import { RiReactjsLine } from "react-icons/ri";
 import { TbBrandNextjs } from "react-icons/tb";
-import { SiMongodb } from "react-icons/si";
+import { SiMongodb, SiTypescript } from "react-icons/si";
 import { DiRedis } from "react-icons/di";
 import { FaNodeJs } from "react-icons/fa";
 import { BiLogoPostgresql } from "react-icons/bi";
@@ -9,11 +9,11 @@ import { motion } from "framer-motion";
 const Technologies = () => {
   const technologies = [
     { Icon: RiReactjsLine, color: "#61DAFB", name: "React" },    
-    { Icon: TbBrandNextjs, color: "#FFFFFF", name: "Next.js" },     
     { Icon: SiMongodb, color: "#47A248", name: "MongoDB" },        
     { Icon: DiRedis, color: "#DC382D", name: "Redis" },          
     { Icon: FaNodeJs, color: "#339933", name: "Node.js" },         
-    { Icon: BiLogoPostgresql, color: "#336791", name: "PostgreSQL" }, 
+    { Icon: BiLogoPostgresql, color: "#336791", name: "PostgreSQL" },
+    { Icon: SiTypescript, color: "#007ACC", name: "TypeScript" },
   ];
 
   const containerVariants = {
@@ -69,7 +69,7 @@ const Technologies = () => {
     <motion.div 
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
+      viewport={{ once: false }}
       transition={{ duration: 0.8 }}
       className="border-b border-neutral-800 pb-24"
     >
@@ -87,7 +87,7 @@ const Technologies = () => {
         initial="hidden"
         whileInView="visible"
         animate="wave"
-        viewport={{ once: true }}
+        viewport={{ once: false }}
         className="flex flex-wrap items-center justify-center gap-8 perspective-1000"
       >
         {technologies.map(({ Icon, color, name }, index) => (
@@ -103,13 +103,17 @@ const Technologies = () => {
             }}
             className="group relative rounded-2xl border-2 border-neutral-800 p-6 backdrop-blur-sm bg-opacity-10 bg-white/5 transition-colors hover:border-neutral-700"
           >
-            <Icon 
-              className="text-7xl transition-transform group-hover:scale-110" 
-              style={{ 
-                color,
-                filter: "drop-shadow(0 0 8px rgba(255,255,255,0.2))"
-              }} 
-            />
+            {Icon ? (
+              <Icon 
+                className="text-7xl transition-transform group-hover:scale-110" 
+                style={{ 
+                  color,
+                  filter: "drop-shadow(0 0 8px rgba(255,255,255,0.2))"
+                }} 
+              />
+            ) : (
+              <div className="text-7xl text-neutral-400">Icon Not Available</div>
+            )}
             <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 translate-y-full opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100 text-sm text-neutral-400">
               {name}
             </span>
