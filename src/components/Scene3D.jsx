@@ -5,7 +5,6 @@ const Scene3D = () => {
   return (
     <Canvas>
       {/* Basic rotating box */}
-     
     </Canvas>
   );
 };
